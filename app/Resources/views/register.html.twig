@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="panel panel-default">
+<div class="panel-heading">Registro</div>
+<div class="panel-body">
+{{ form_start(form) }}
+<div class="form_group">
+<div class="col-md-8 col-md-offset-2">
+{{ form_row(form.name, {'attr': {'class': 'formcontrol'}}) }}
+</div>
+</div>
+<div class="form_group">
+<div class="col-md-8 col-md-offset-2">
+{{ form_row(form.email, {'attr': {'class': 'formcontrol'}}) }}
+</div>
+</div>
+<div class="form_group">
+<div class="col-md-8 col-md-offset-2">
+{{ form_row(form.plainPassword.first, {'attr':
+{'class': 'form-control'}}) }}
+</div>
+</div>
+<div class="form_group">
+<div class="col-md-8 col-md-offset-2">
+{{ form_row(form.plainPassword.second, {'attr':
+{'class': 'form-control'}}) }}
+</div>
+</div>
+<div class="form-group">
+<div class="col-md-8 col-md-offset-4" style="margintop:5px;">
+<button type="submit" class="btn btn-primary">
+<i class="fa fa-btn fa-user"></i> Registro
+</button>
+</div>
+</div>
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
