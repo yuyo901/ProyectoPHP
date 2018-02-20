@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-success">
+                <div class="panel-heading">Lista de personajes de Game of Thrones</div>
+
+                  <table class="table">
+                      <tr>
+                          <th>Personaje</th>
+                          <th>Nombre Real</th>
+                      </tr>
+
+                      {% for character in characters %}
+                        <tr>
+                          <td>{{ character.name }}</td><td>{{ character.realname }}</td>
+                        </tr>
+                      {% endfor %}
+                  </table>
+
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
