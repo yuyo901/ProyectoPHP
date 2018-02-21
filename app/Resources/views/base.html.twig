@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>{% block title %}Welcome!{% endblock %}</title>
-{% block stylesheets %}{% endblock %}
-<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')
-}}" />
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.mi
-n.css">
-<!-- jQuery library -->
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-></script>
+	<head>
+	<meta charset="UTF-8" />
+	<!--Bootstrap core CSS -->
+	<link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}"" rel="stylesheet">
+	<!--Custom styles for this template-->
+		<link href="{{asset('css/maxcdn.css rel="stylesheet" rel= "stylesheet')}}">
+		{% block body %}{% endblock %}
 <!-- Latest compiled JavaScript -->
-<script
-src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.
-js"></script>
-<script src="css/style.css"></script>
-</head>
 <body>
-{% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <title>{% block title %}HotelesPanama{% endblock %}</title>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{path('login')}}">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{path('register')}}">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{path('create_character')}}">Guardar en Base de Datos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Buscar en Base de Datos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<script src="{{asset('vendor/jqery/jqery.js')}}"></script>
+	<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min,js')}}"></script>
 </body>
+</head>	
 </html>
