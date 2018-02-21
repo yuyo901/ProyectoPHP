@@ -1,20 +1,18 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <div id="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="panel panel-success">
-                        <div class="panel-heading">Lista de Hoteles de la ciudad de Panamá</div>
-                    {% if app.user != null %}
-                <table class="table">
-            <tr>
-            <th>Personaje</th>
-            <th>Nombre Real</th>
-            </tr>
-            {% for key, item in character %}
-            <tr>
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="panel panel-success">
+<div class="panel-heading">Lista de Hoteles de Panamá</div>
+{% if app.user != null %}
+<table class="table">
+<tr>
+<th>Hotel</th>
+<th>Dirección</th>
+</tr>
+{% for key, item in character %}
+<tr>
 <td>{{ key }}</td><td>{{ item }}</td>
 </tr>
 {% endfor %}

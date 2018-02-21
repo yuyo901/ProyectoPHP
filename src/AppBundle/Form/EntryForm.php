@@ -23,7 +23,8 @@ class EntryForm extends AbstractType
                 TextType::class,
                 [
                     'constraints' => [new NotBlank()],
-                    'attr' => ['class' => 'form-control']
+                    'attr' => ['class' => 'form-control'],
+                    'label' => 'Hotel'
                 ]
             )
             ->add(
@@ -31,7 +32,8 @@ class EntryForm extends AbstractType
                 TextType::class,
                 [
                     'constraints' => [new NotBlank()],
-                    'attr' => ['class' => 'form-control']
+                    'attr' => ['class' => 'form-control'],
+                    'label' => 'Dirección'
                 ]
             )
             ->add(
@@ -39,7 +41,8 @@ class EntryForm extends AbstractType
                 TextareaType::class,
                 [
                     'constraints' => [new NotBlank()],
-                    'attr' => ['class' => 'form-control']
+                    'attr' => ['class' => 'form-control'],
+                    'label' => 'Comentario'                    
                 ]
             )
             ->add(
@@ -47,7 +50,7 @@ class EntryForm extends AbstractType
                 SubmitType::class,
                 [
                     'attr' => ['class' => 'form-control btn-primary pull-right'],
-                    'label' => 'Create!'
+                    'label' => 'Registrar'
                 ]
             );
     }
